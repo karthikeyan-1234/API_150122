@@ -28,6 +28,7 @@ namespace API_150122.Controllers
             return CreatedAtRoute("GetCustomerById", new {id = customer.id}, customer);
         }
 
+        [AllowAnonymous]
         [HttpGet("GetCustomerById",Name = "GetCustomerById")]
         public async Task<IActionResult> GetCustomerByID(int id)
         {
